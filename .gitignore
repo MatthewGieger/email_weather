@@ -1,0 +1,3 @@
+# Ignore settings.py to hide credentials
+settings.py
+*.pyc
