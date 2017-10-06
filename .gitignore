@@ -1,4 +1,4 @@
-# Ignore settings.py to hide credentials
+# Ignore settings.py to mask personal settings
 settings.py
 *.pyc
 log.txt
