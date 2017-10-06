@@ -1,5 +1,5 @@
 import smtplib
-import urllib2
+from urllib.request import urlopen
 import json
 import settings
 import time
@@ -21,7 +21,7 @@ def get_weather_data(weather, day, indicator, unit=""):
         return weather["forecast"]["simpleforecast"]["forecastday"][day][indicator][unit]
 
 
-response = urllib2.urlopen(settings.weather_url)
+response = urlopen(settings.weather_url)
 weather = json.loads(response.read())
 
 smtp_server = smtplib.SMTP(host=settings.smtp_server, port=settings.smtp_port)
@@ -59,9 +59,5 @@ for day in settings.forecast_days:
 smtp_server.quit()
 
 # Log Process #
-with open(settings.log_file, "ab") as f:
-    f.write("{timestamp}: Email sent to {to_email} from {from_email}\n".format(
-        timestamp=time.strftime("%Y-%m-%d-%X"),
-        to_email=settings.to_email,
-        from_email=settings.from_email
-    ))
+with open(settings.log_file, "a") as f:
+    f.write(f"{time.strftime('%Y-%m-%d-%X')}: Email sent to {settings.to_email} from {settings.from_email}\n")

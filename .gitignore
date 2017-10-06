@@ -1,4 +1,7 @@
-# Ignore settings.py to mask personal settings
+# Directories
+.venv/
+
+# Files
 settings.py
 *.pyc
 log.txt
