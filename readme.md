@@ -5,7 +5,7 @@
   My father asked me if he could receive a daily text with a useful weather forecast. After looking for such a service, all sms forecasts were pretty pathetic, thus email_weather was born.
 
 # DESCRIPTION:
-  A simple python program that fetches weather data from WeatherUnderground via the weatherunderground api and emails it out.
+  A simple python program that fetches weather data from WeatherUnderground via the weatherunderground api and emails it out to a list of email/sms addresses.
 
 # REQUIREMENTS:
   Python 3
