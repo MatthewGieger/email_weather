@@ -1,5 +1,5 @@
 # AUTHOR:
-  Matthew Gieger
+  Meichthys
 
 # USE CASE
   My father asked me if he could receive a daily text with a useful weather forecast. After looking for such a service, all sms forecasts were pretty pathetic, thus email_weather was born.
